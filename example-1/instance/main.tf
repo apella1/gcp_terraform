@@ -13,5 +13,4 @@ resource "google_compute_instance" "vm_instance" {
       # Allocate a one-to-one NAT IP to the instance
     }
   }
-
 }

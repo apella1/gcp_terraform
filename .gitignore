@@ -8,7 +8,7 @@ crash.log
 # Plan output files
 *.tfplan
 
-# Sensitive variable files (optional, if you use them)
+# Sensitive variable files
 *.auto.tfvars
 *.auto.tfvars.json
 terraform.tfvars
@@ -16,3 +16,5 @@ terraform.tfvars.json
 
 # Terraform working directory
 .terraform/
+
+tfplan
