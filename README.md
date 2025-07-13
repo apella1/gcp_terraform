@@ -17,23 +17,32 @@ This project aims to provide practical examples for using Terraform to provision
 
 1. Clone this repository
 2. Authenticate with Google Cloud:
-   ```
+
+   ```bash
    gcloud auth application-default login
    ```
+
 3. Navigate to an example directory:
-   ```
+
+   ```bash
    cd example-1
    ```
+
 4. Initialize Terraform:
-   ```
+
+   ```bash
    terraform init
    ```
+
 5. Plan your changes:
-   ```
+
+   ```bash
    terraform plan
    ```
+
 6. Apply your changes:
-   ```
+
+   ```bash
    terraform apply
    ```
 
@@ -45,9 +54,11 @@ This project aims to provide practical examples for using Terraform to provision
 ## Important Notes
 
 - Remember to destroy resources when you're done to avoid unnecessary charges:
-  ```
+
+  ```bash
   terraform destroy
   ```
+
 - The `.gitignore` file is configured to exclude sensitive files like `.tfstate`, `.tfvars`, and the `.terraform/` directory
 
 ## Resources
