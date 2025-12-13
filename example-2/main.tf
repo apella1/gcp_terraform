@@ -33,3 +33,7 @@ resource "google_compute_instance" "vm_instance" {
     access_config {}
   }
 }
+
+resource "google_compute_address" "vm_static_ip" {
+    name = "terraform-static-ip"
+}
