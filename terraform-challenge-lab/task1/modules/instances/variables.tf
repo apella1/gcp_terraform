@@ -10,7 +10,17 @@ variable "machine_type" {
 }
 
 variable "boot_disk" {
-  type = string
+  type        = string
   description = "Boot disk"
-  default = "debian-cloud/debian-11"
+  default     = "debian-cloud/debian-11"
+}
+
+variable "network" {
+  description = "Network name"
+  type        = string
+}
+
+variable "subnet" {
+  description = "Subnet self link"
+  type        = string
 }

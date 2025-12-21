@@ -27,15 +27,18 @@ module "instances" {
   for_each = {
     "tf-instance-1" = {
       machine_type = "e2-micro"
+      subnet_index = 0
     }
     "tf-instance-2" = {
       machine_type = "e2-micro"
+      subnet_index = 1
     }
   }
   source       = "./modules/instances"
   name         = each.key
   machine_type = each.value.machine_type
-  boot_disk    = each.value.boot_disk
+  network      = module.vpc.network_name
+  subnet       = module.vpc.subnets_self_links[each.value.subnet_index]
 }
 
 /*
