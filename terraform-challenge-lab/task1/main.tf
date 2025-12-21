@@ -26,9 +26,18 @@ module "storage" {
 }
 
 module "instances" {
-  for_each = toset(["tf-instance-1", "tf-instance-2"])
-  source   = "./modules/instances"
-  name     = each.key
+  for_each = {
+    "tf-instance-1" = {
+      machine_type = "e2-micro"
+    }
+    "tf-instance-2" = {
+      machine_type = "e2-micro"
+    }
+  }
+  source       = "./modules/instances"
+  name         = each.key
+  machine_type = each.value.machine_type
+  boot_disk    = each.value.boot_disk
 }
 
 /*

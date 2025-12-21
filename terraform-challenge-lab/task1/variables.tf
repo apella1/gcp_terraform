@@ -13,5 +13,5 @@ variable "region" {
 variable "project_id" {
   type        = string
   description = "Lab project ID"
-  default = "qwiklabs-gcp-02-73bfa8e6d765"
+  default = "qwiklabs-gcp-04-af7a12f07519"
 }
