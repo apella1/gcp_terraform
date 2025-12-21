@@ -70,6 +70,18 @@ module "vpc" {
 
 }
 
+resource "google_compute_firewall" "tf-firewall" {
+  name    = "tf-firewall"
+  network = module.vpc.network_name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+}
+
 terraform {
   backend "gcs" {
     bucket = "tf-bucket-210951"
